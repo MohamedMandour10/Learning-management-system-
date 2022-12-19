@@ -41,7 +41,7 @@ double Student::getGPA()
 	return gpa;
 }
 
-void Student::setGPA(float g_pa)
+void Student::setGPA(char g_pa)
 {
 	gpa = g_pa;
 }
@@ -55,5 +55,3 @@ void Student::setTotGrade(float total)
 {
 	total_grade = total;
 }
-
-

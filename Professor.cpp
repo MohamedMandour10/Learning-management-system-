@@ -1,7 +1,3 @@
-//
-// Created by ahmed on 12/16/2022.
-//
-
 #include "Professor.h"
 
 string Professor::getFirstName() {
@@ -10,6 +6,10 @@ string Professor::getFirstName() {
 
 string Professor::getLastName() {
     return lastName;
+}
+
+string Professor::getFullName() {
+    return firstName + lastName;
 }
 
 int Professor::getAge() {
