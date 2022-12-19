@@ -1,22 +1,11 @@
 #include <iostream>
 #include<map>
+
+#include "Admin.h"
+
 using namespace std;
 
-class Admin
-{
-private:
-    string username;
-    string password;
-    string fullName;
-    string adress;
-    string phoneNumber;
-    map<string, string> check{{"ahmed", "ahmedpass"}, {"mohamed", "mohamedpass"}};
-
-public:
-
-    Admin(){}
-
-    void registerNew(string username, string password, string fullName, string adress, string phoneNumber){
+void registerNew(string username, string password, string fullName, string adress, string phoneNumber){
         adress = adress;
         fullName = fullName;
         phoneNumber = phoneNumber;
@@ -39,10 +28,3 @@ public:
         username = username;
         check[username] = password;
     }
-
-    
-   
-    ~Admin(){}
-};
-
-
