@@ -1,2 +1,2 @@
-## learning mangment system
+## Learning Mangment System
 ### Our learning mangment system
