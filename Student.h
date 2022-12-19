@@ -1,16 +1,21 @@
-#pragma once
+#ifndef STUDENT_H
+#define STUDENT_H
+
 #include <string>
+#include "User.h"
+
 class Student
 {
 	protected:
 		float grade;
 	private:
 		string ID;
-		float gpa;
+		char gpa;
 		float total_grade;
 	public:
 		//default
 		Student();
+
 		//parameterized
 		Student(float grade,string ID,float gba,float total_grade);
 
@@ -21,7 +26,7 @@ class Student
 		void setID(string id);
 
 		double getGPA();
-		void setGPA(float g_pa);
+		void setGPA(char g_pa);
 
 		double getTotGrade();
 		void setTotGrade(float total);
@@ -29,3 +34,4 @@ class Student
 		void addNew();
 };
 
+#endif
