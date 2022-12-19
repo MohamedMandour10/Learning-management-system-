@@ -12,7 +12,7 @@ protected:
     int age;
 
 public:
-   User(string &fn, string &ln ,string &m,string &e,int &a):firstName(fn),lastName(ln),mobile(m),email(e),age(a) {}
+   User(string &fname, string &lname ,string &mobile,string &email,int &age):firstName(fname),lastName(lname),mobile(mobile),email(email),age(age) {}
    
    virtual string getFirstName()=Null;
    virtual string getLastName()=Null;
