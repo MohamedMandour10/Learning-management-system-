@@ -1,40 +1,38 @@
 #ifndef USER_H
 #define USER_H
+
 #include<vector>
 #include<utility>
+#include<map>
 #include<iostream>
-#include<Professor.h>
-#include<Student.h>
+#include <ctime>
+
+#include "Professor.h"
+#include "Student.h"
+
 using namespace std;
 
-class course
+class Course
 {
+    protected:
+        string name;
+        string ID;
+        vector <Professor> profs;
+        map <Student,float> students;
+        string lecHall;
+        pair <int, int> time;
+
     public:
-        course(string name,string D,string lec_hall,string T);
-        void add_profs( vector<Professor> pro);
+        Course(string name,string D,string lecHall,string T);
+        void add_profs(vector<Professor> pro);
         void add_students();
-        string get_couse();
+        string get_course();
         string get_hall();
         string get_time();
         string gt_ID();
         vector<Professor> get_prof();
 
-
-
-
-
-        virtual ~course();
-
-
-    protected:
-
-    private:
-        string name="pleas enter your name";
-        string ID="921133";
-        vector<Professor> profs;
-        pair<Student,float>students;
-        string lec_holl="9384";
-        string time="12.5:2 pm";
+        ~Course();
 
 };
 
