@@ -3,7 +3,7 @@
 #include<string>
 
 #include "../admin/Admin.h"
-#include "../Database.cpp"
+#include "../admin/Admin.h"
 
 using namespace std;
 
@@ -17,7 +17,7 @@ int Admin::hashing(string password){
     }
 
 bool Admin::checkUsername(string username){
-        if(database.userpassword[username]) return false;
+        if(check[username]) return false;
         else return true; 
 
     }
@@ -41,11 +41,11 @@ void Admin::registerNew(string username, string password, string fullName, strin
         phoneNumber = phoneNumber;
        password = password;
        username = username;
-        database.userpassword[username] = hashing(password);
+        check[username] = hashing(password);
     }
 
     void Admin::loginCheck(string username, string password){
-        if(database.userpassword[username] == hashing(password)) cout<< "Login successful";
+        if(check[username] == hashing(password)) cout<< "Login successful";
             
         else  cout<< "Login failed";
 

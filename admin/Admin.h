@@ -1,7 +1,8 @@
+#pragma once
+
 #include <iostream>
 #include<map>
 #include <string>
-#include "../Database.cpp"
 using namespace std;
 
 class Admin
@@ -14,9 +15,8 @@ private:
     string fullName;
     string adress;
     string phoneNumber;
-    Database database = Database();
     
-  
+    map<string, int> check{ {"ahmed", hashing("ahmedpass")}, {"mohamed", hashing("mohamedpass")} };
 
 public:
 
