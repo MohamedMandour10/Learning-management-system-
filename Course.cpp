@@ -1,41 +1,41 @@
-#include "course.h"
+#include "Course.h"
 
-course::course(string n,string D,string hall,string T)
+Course::Course(string n,string D,string hall,string T)
 {
     name=n;
     ID=D;
     time=T;
-    lec_hall=hall;
+    lecHall=hall;
 
 
 }
-void course::add_profs( vector<professor> pr){
+void Course::add_profs(vector<Professor> pr){
       profs=pr;
 
 
 }
-void course::add_students(pair<Student,float>stu){
+void Course::add_students(map<Student,float>stu){
     students.first=stu.first;
     students.second=stu.second;
 
 }
-string course::get_couse(){
+string Course::get_couse(){
 return name;
 }
-string course::get_hall(){
-return lec_hall;
+string Course::get_hall(){
+return lecHall;
 }
-string course::get_time(){
+string Course::get_time(){
 return time;
 }
-string course::gt_ID(){
+string Course::gt_ID(){
 return ID;
 }
-vector<professor> course::get_prof(){
+vector<professor> Course::get_prof(){
 return  profs
 }
 
-course::~course()
+Course::~Course()
 {
     //dtor
 }
