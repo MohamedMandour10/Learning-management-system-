@@ -1,6 +1,7 @@
 #include <iostream>
 #include<map>
 #include <string>
+#include "../Database.cpp"
 using namespace std;
 
 class Admin
@@ -13,13 +14,14 @@ private:
     string fullName;
     string adress;
     string phoneNumber;
+    Database database = Database();
     
-    map<string, int> check{ {"ahmed", hashing("ahmedpass")}, {"mohamed", hashing("mohamedpass")} };
+  
 
 public:
 
     Admin();
-    
+
     int hashing(string password);
 
 
@@ -31,7 +33,21 @@ public:
 
     void loginCheck(string username, string password);
 
-    void updateTo(string username, string password, string fullName, string adress, string phoneNumber);
+    void setUsername(string username);
+
+    void setPassword(string password);
+
+    void setFullName(string fullName);
+
+    void setAdress(string adress);
+
+    void setPhoneNumber(string phoneNumber);
+
+    string getFullName();
+
+    string getAdress();
+
+    string getPhoneNumber();
 
     ~Admin();
 };
