@@ -4,34 +4,59 @@
 #include <string>
 #include "User.h"
 
-class Student
+class Student :public User
 {
-	protected:
-		float grade;
-	private:
-		string ID;
-		char gpa;
-		float total_grade;
-	public:
-		//default
-		Student();
+protected:
+	float grade;
 
-		//parameterized
-		Student(float grade,string ID,float gba,float total_grade);
+private:
+	char gpa;
+	float totalGrade;
+public:
+	//-> Course_Code -> grade
+	map<string, int>grades;
 
-		double getGrade();
-		void setGrade(float G);
+	//storing students------search
+	static map<string, Student>students;
 
-		double getID();
-		void setID(string id);
+	//default
+	Student();
 
-		double getGPA();
-		void setGPA(char g_pa);
+	//parameterized
+	Student(string& fn, string& ln, string& m, string& e, int a
+		, float& g, string& i, float& gb, float& tot) : User(fn, ln, m, e, a), grade(g), gpa(gb)
+		, totalGrade(tot)
+	{}
+	double getGrade();
+	void setGrade(float G);
 
-		double getTotGrade();
-		void setTotGrade(float total);
+	
 
-		void addNew();
+	double getGpa();
+	void setGpa(char g_pa);
+
+	double getTotGrade();
+	void setTotGrade(float total);
+
+	string getFirstName();
+	void setFirstName(string first_Name);
+
+	string getLastName();
+	void   setLastName(string last_Name);
+
+	string getFullName();
+
+	int getAge();
+	void setAge(int a_ge);
+
+	string getMobile();
+	void setMobile(string m_obile);
+
+	string getMail();
+	void setMail(string e_mail);
+
+
+	void addNew();
 };
 
 #endif
